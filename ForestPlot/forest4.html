@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <head>
+<script  src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+  </head>
+  <body>
+  <label style="color:black; "><b><em>Please choose your file:</em></b></label>
+  <div>
+   <input type="file" id="myfile" name="myfile" onchange="readfile()">
+  </div>
+<br><br>
+  <div class="container" style="display: flex;">
+<div id="Axis" style="width: 20%";>
+   <label style="color:black; "><b><em>Axis Range:</em></b></label>
+  <div>
+   Min  <input type="text" class="rmin" name="rmin" value="0.80" required minlength="4" maxlength="8" size="5">
+   </div>
+  <div>
+  Max  <input type="text" class="rmax" name="rmax" value="1.10" required minlength="4" maxlength="8" size="5">
+  </div>
+</div>
+  <br><br>
+ <div id="pos" style="width: 20%";>
+  <label style="color:black;"><b><em>Position:</em></b></label>
+  <div>
+   Discriptions <input type="range" class='disc' id='disc' value="0" min='0' max="100" step="1" >
+  </div>
+
+  <div>
+   Plot<input type="range" class='plot' id='plotid' value="200" min='0' max="300" step="1">
+  </div>
+
+  <div>
+   Ratios<input type="range" class='ratio' id='ratio' value="550" min='350' max="800" step="1">
+  </div>
+ </div>
+  <br><br>
+
+   <div id="bg" >
+  <label style="color:black; "><b><em>Background</em></b></label>
+    <select class='bgs' name="cars" >
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+       <br><br>
+         <div>
+   <b><em>Increase Height</em></b>  <input type="text" class="vh" name="vh" value="5" required minlength="4" maxlength="8" size="5">
+  </div>
+    </div>
+
+  </div>
+<br>
+
+<p>
+   <a href=""id="link" download="image.png">Download PNG</a>
+</p>
+
+<div>
+  <svg class='svg' id="svg" xmlns="http://www.w3.org/2000/svg" viewbox="10 0 800 260" style="background-color: white"></svg>
+</div>
+
+    <script type='text/javascript' src='forest4.js'></script>
+  </body>
