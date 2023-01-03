@@ -138,7 +138,7 @@ var data = [data]
 
 
 var layout = {
-  title: "Example of Sankey Plot",
+  title: " ",
   width: 1118,
   height: 772,
   font: {
