@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <script  src="https://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+</head>
+<body>
+<div id="Axis" style="width: 20%";>
+   <label style="color:black; "><b><em>Label Size:</em></b></label>
+  <div>
+   Legend  <input type="text" class="rleg" name="rleg" value="20" required minlength="4" maxlength="8" size="5">
+   </div>
+  <div>
+  Percent  <input type="text" class="rpct" name="rpct" value="16" required minlength="4" maxlength="8" size="5">
+  </div>
+</div>
+
+<div style="position:absolute;  right:100px;top:30px;">
+    <h3 id="po">Input Percentage</h3>
+    <form class="" action="index.html" method="post">
+        <input type="text" name="array[]" value="100%" /><br>
+        <input type="text" name="array[]" value="80.5%" /><br>
+        <input type="text" name="array[]" value="19.2%" /><br>
+        <input type="text" name="array[]" value="0.4%" /><br>
+        <input type="text" name="array[]" value="61.7%" /><br>
+        <input type="text" name="array[]" value="36.4%" /><br>
+        <input type="text" name="array[]" value="2.0%" /><br>
+        <input type="text" name="array[]" value="47.1%" /><br>
+        <input type="text" name="array[]" value="52.2%" /><br>
+        <input type="text" name="array[]" value="0.7%" /><br>
+        <input type="text" name="array[]" value="15%" /><br>
+        <input type="text" name="array[]" value="85%" /><br>
+        <button type="button" name="button" onclick="Geeks()">
+            Submit
+        </button>
+    </form>
+    <br>
+</div>
+
+<script src="script5_2.js"></script>
+</body>
+</html>
