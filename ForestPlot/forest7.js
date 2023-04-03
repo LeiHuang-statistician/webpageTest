@@ -187,6 +187,7 @@ console.log("ticks",xA.ticks())
 
 
 
+
 selfMadeSqare=(dsize)=>{return `M ${dsize} -${dsize} ${dsize} ${dsize} -${dsize} ${dsize} -${dsize} -${dsize} Z`}
 selfMadeDiamondLong=(dsize)=>{return `M 0 -${dsize} ${dsize*2} 0 0 ${dsize} -${dsize*2} 0 Z`}
 selfMadeDiamondshort=(dsize)=>{return `M 0 -${dsize} ${dsize} 0 0 ${dsize} -${dsize} 0 Z`}
@@ -366,7 +367,7 @@ function readfile(e){
            {effL.push(d)}
         })
         effL.push(rmin)
-        rminL=(+Math.min(...effL)-xoff).toFixed(1)
+        rminL=(+Math.min(...effL)-xoff).toFixed(3)
         console.log("effL",effL)
 
         effH=[]
@@ -378,7 +379,7 @@ function readfile(e){
         effH.push(rmax)
         num=(+Math.max(...effH)+xoff)
         //rmaxH=(+Math.max(...effH)+xoff)
-        rmaxH=(Math.round((num + Number.EPSILON) * 100) / 100).toFixed(1)
+        rmaxH=(Math.round((num + Number.EPSILON) * 100) / 100).toFixed(3)
         console.log("effH",effH)
 
 
