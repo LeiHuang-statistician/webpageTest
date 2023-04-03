@@ -164,7 +164,7 @@ console.log("ticks",xA.ticks())
        .enter()
        .append('rect')
        .attr('class','vbgrow')
-       .attr('height', lc-60)
+       .attr('height', lc-100)
        .attr('width', 238)
        .attr('x', 0)
        .attr('y', 0)
@@ -185,21 +185,6 @@ console.log("ticks",xA.ticks())
        .attr('stroke', 'black')
        .attr('transform', (d, i) =>`translate( 2.5, ${rowHeight * i})`);
 
- /*small box*/
-//    plot.selectAll('.rect').data(data)
-//      .enter()
-//      .append('rect')
-//      .attr('height', 6)
-//      .attr('width', 6)
-//      .attr('x', d=>xA(d.effect))
-//      .attr('y',7)
-//      .attr('transform', (d, i) =>`translate( 2.5, ${rowHeight * i})`);
-
-//'M 10 0 20 10 10 20 0 10 Z'
-//Diamond:'M 0 -5 10 0 0 5 -10 0 Z'
-//Small diamond:'M 0 -5 5 0 0 5 -5 0 Z'
-//square:'M 5 -5 5 5 -5 5 -5 -5 Z'
-//triangle:`M 0 -4 -4 4 0 4 4 4 Z`
 
 
 selfMadeSqare=(dsize)=>{return `M ${dsize} -${dsize} ${dsize} ${dsize} -${dsize} ${dsize} -${dsize} -${dsize} Z`}
