@@ -202,6 +202,7 @@ pathCircle = d3.path()
       .attr("d", d=>{
                  if (csr=="No") {return selfMadeSqare(dsize)}
                  if (csr=="Yes") {
+                 if(!d.symboltype){alert("Please input symbolsize, symboltype, and symbolcolor in your dataset!")}
                  if ((d.symboltype).toLowerCase()=="s") {return selfMadeSqare(+d.symbolsize)}
                  if ((d.symboltype).toLowerCase()=="t") {return selfMadeTriangle(+d.symbolsize)}
                  if ((d.symboltype).toLowerCase()=="c") {
