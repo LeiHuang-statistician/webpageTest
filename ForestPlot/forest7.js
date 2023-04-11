@@ -303,7 +303,7 @@ $('#rmax').val(rMax);
 
 const svgS=document.getElementById("svg")
 const {x,y,width,height}=svgS.viewBox.baseVal;
-var svgData = $("#svg")[0].innerHTML;
+var svgData = $("#svg")[0].outerHTML;
 var svgBlob = new Blob([svgData], {type:"image/svg+xml;charset=utf-8"});
 var svgUrl = URL.createObjectURL(svgBlob);
 const image=document.createElement('img');
