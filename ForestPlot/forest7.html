@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <head>
+<script  src="https://d3js.org/d3.v7.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<style>
+
+
+#forsvg{margin-bottom:30px;}
+#plocontainer{margin-top:100px;}
+label{
+display: inblock;
+padding-right:5px;
+padding-top: 0px; /*This needs to be modified to fit */
+}
+
+#pos label{
+float:left;
+}
+#ref{padding-left:50px}
+#dtndiv{
+display:inblock;
+display:flex;
+margin:auto;
+}
+
+button {
+	padding:5px 15px;
+	background:#5ba545;
+	border:0 none;
+	cursor:pointer;
+	-webkit-border-radius: 5px;
+	border-radius: 10px;
+	color: #fff;
+	margin-left:15px;
+
+	}
+
+
+ button:hover {
+    color: black;
+    box-shadow: 0 0 30px 0 transparentize($col-primary, 0.5);
+     }
+
+ #format{
+ margin-left:50px;
+ }
+#files {
+ margin-top:20px;
+display:flex;
+}
+#tutor {margin-right: 20px}
+
+
+#loader {
+position: absolute;
+top:35%;
+bottom: 0px;
+left: 35%;
+width:60%;
+height:80%;
+}
+
+</style>
+
+  </head>
+  <body>
+
+  <div id="files">
+ <div id="tutor">
+   <a href="Instruction_forestplot.pdf" target="_blank" id="pdf">
+   <button>Tutorial</button>
+   </a>
+</div>
+
+ <div>
+  <label style="color:black; "><b><em>Please choose your file:</em></b></label>
+  <br>
+   <input type="file" id="myfile" name="myfile" onchange="readfile()">
+</div>
+</div>
+<br>
+  <div class="container" style="display: flex;">
+<div id="Axis" style="width: 20%";>
+   <label style="color:black; "><b><em>Axis Range:</em></b></label>
+    <br>
+  <div>
+      <label for="rmin" style="color:black;">Min Range</label>
+   <input type="text" class="rmin" id="rmin" name="rmin" value="Min?"   minlength="4" maxlength="8" size="5">
+   </div>
+  <div>
+      <label for="rmax" style="color:black;">Max Range</label>
+      <input type="text" class="rmax" id="rmax" name="rmax" value="Max?"   required minlength="4" maxlength="8" size="5">
+  </div>
+      <div>
+      <label for="tickn" style="color:black;">Ticks Number</label>
+      <input type="text" class="tickn" id="tickn" name="tickn" value="?"   required minlength="4" maxlength="8" size="5">
+  </div>
+</div>
+  <br><br>
+
+ <form id="pos" style="width: 20%";>
+  <label style="color:black;"><b><em>Position:</em></b></label>
+     <br>
+     <label for="disc" style="color:black;">Discriptions</label>
+   <input type="range" class='disc' id='disc' value="0" min='0' max="600" step="1" >
+
+    <br>
+   <label for="plotid" style="color:black;">Plot</label>
+   <input type="range" class='plotid' id='plotid' value="200" min='0' max="600" step="1">
+
+  <br>
+   <label for="ratio" style="color:black;">Ratios</label>
+   <input type="range" class='ratio' id='ratio' value="550" min='0' max="600" step="1">
+ <br>
+      <label for="titpos" style="color:black;">Title</label>
+   <input type="range" class='titpos' id='titpos' value="310" min='0' max="600" step="1">
+ </form>
+  <br><br>
+
+<div id="bg" >
+  <label style="color:black; "><b><em>Background</em></b></label>
+    <select class='bgs' name="cars" >
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+       <br><br>
+
+  <label style="color:black; "><b><em>Plot Background</em></b></label>
+    <select class='vbgs' name="cars" >
+      <option value="No">No</option>
+      <option value="Yes">Yes</option>
+    </select>
+       <br><br>
+
+     <div>
+<!--   <b><em>Increase Height</em></b>  <input type="text" class="vh" name="vh" value="5" required minlength="4" maxlength="8" size="5">-->
+    <label style="color:black; "><b><em>X Format Change</em></b></label>
+    <select class='logr' name="logr" >
+        <option value="OD">One Decimal</option>
+         <option value="TD">Two Decimals</option>
+        <option value="EXP">Exp</option>
+
+    </select>
+         </div>
+    </div>
+
+    <div  id="format">
+     <div >
+<!--   <b><em>Increase Height</em></b>  <input type="text" class="vh" name="vh" value="5" required minlength="4" maxlength="8" size="5">-->
+    <label style="color:black; "><b><em>Format p value</em></b></label>
+    <select class='pt' name="pt" >
+        <option value="No">No</option>
+      <option value="Yes">Yes</option>
+    </select>
+         </div>
+        <br>
+  <div >
+<!--   <b><em>Increase Height</em></b>  <input type="text" class="vh" name="vh" value="5" required minlength="4" maxlength="8" size="5">-->
+    <label style="color:black; "><b><em>Change Symbols</em></b></label>
+    <select class='cs' name="cs" >
+        <option value="No">No</option>
+      <option value="Yes">Yes</option>
+    </select>
+         </div>
+    </div>
+        </div>
+
+  <div id="dtndiv">
+
+<p>
+   <a href="" id="link" download="image.png">
+   <button>Download PNG</button>
+   </a>
+</p>
+
+  <p>
+      <button id="download">Download PDF</button>
+</p>
+
+
+</div>
+
+
+<div id="forsvg">
+  <svg class='svg'  id="svg" xmlns="http://www.w3.org/2000/svg" viewbox="10 0 800 260" style="background-color: white"></svg>
+</div>
+<div id='loader' ><img src="loader.gif"/></div>
+    <script type='text/javascript' src='forest7.js'></script>
+  </body>
