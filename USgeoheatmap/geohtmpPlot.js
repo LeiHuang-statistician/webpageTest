@@ -187,6 +187,7 @@ function geohtmp(){
 
       $('#rmin').val(rmin);
       $('#rmax').val(rmax);
+      $("#loader").hide();
     }
     
     
