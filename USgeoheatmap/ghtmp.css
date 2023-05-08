@@ -1,0 +1,151 @@
+
+#forsvg{
+  position: absolute;
+  top:15%;
+  bottom: 0px;
+  left: 10%;
+  width:60%;
+  height:80%;
+  background-color: white;
+  border-radius: 15px;
+  border: 1px solid #5ba545;
+ margin-left:5%;
+}
+svg { position:fixed; top:16%; left:10%; height:85%; width:85% }
+
+
+#Axis{
+    margin-left: 5%;
+}
+
+#valrange{
+    margin-left: 60%;
+    margin-top:25px;
+}
+#htmcontainer {
+    display:inblock;
+    display:flex;
+}
+
+#tlab { margin-left: 15px;}
+#sidebar {
+   position:fixed;
+  margin-top: 5%;
+  margin-left:3%;
+  height: 46%;
+  width: 6.5%;
+  border: 1px solid #5ba545;
+  /* border: 1px solid #f1f4f1; */
+  border-radius: 25px;
+  z-index:-1;
+
+}
+
+.colordiv {
+    width:80%;
+    height:4.5%;
+    margin-top:15%;
+    margin-left:8%;
+    text-align: center;
+    cursor:pointer;
+    border-radius: 15px;
+    border: 1px solid transparent;
+}
+.colordiv:hover {
+    border-color: rgb(78, 77, 77);
+    }
+.colorplate{
+    width:100%;
+    height:100%;
+    border-radius: 15px;
+ }
+
+#tutor {
+    position:fixed;
+    top:2%;
+    margin-left: 0%;
+}
+#choosefile{
+    position:fixed;
+    top:2%;
+    margin-left: 10%;
+}
+#dtndiv{
+    position: fixed;
+    left: 25%;
+    top:1%;
+    display:inblock;
+    display:flex;
+
+    }
+#Axis, #pos ,#level,#tlab{
+     position:fixed;
+         top:8%;
+}
+#Axis{margin-left: 3%;}
+#pos{ margin-left: 15%;}
+#level{ margin-left: 30%;}
+#tlab {margin-left: 45%;}
+
+button {
+    padding:5px 15px;
+    background:#5ba545;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 10px;
+    color: #fff;
+    margin-left:15px;
+
+    }
+
+
+button:hover {
+    color: black;
+    box-shadow: 0 0 30px 0 transparentize(0.5);
+    }
+
+label{
+    display: inblock;
+    padding-right:5px;
+    padding-top: 0px; /*This needs to be modified to fit */
+    }
+#pos label{
+    float:left;
+    }
+
+.counties :hover {
+  fill: red;
+}
+
+.county-borders {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 0.5px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+.state-borders {
+  stroke: black;
+  stroke-width: 1px;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
