@@ -192,7 +192,9 @@ selfMadeSqare=(dsize)=>{return `M ${dsize} -${dsize} ${dsize} ${dsize} -${dsize}
 selfMadeDiamondLong=(dsize)=>{return `M 0 -${dsize} ${dsize*2} 0 0 ${dsize} -${dsize*2} 0 Z`}
 selfMadeDiamondshort=(dsize)=>{return `M 0 -${dsize} ${dsize} 0 0 ${dsize} -${dsize} 0 Z`}
 selfMadeTriangle=(dsize)=>{return `M 0 -${dsize} -${dsize} ${dsize} 0 ${dsize} ${dsize} ${dsize} Z`}
+selfMadeLineSqare=(dsize)=>{return `M ${dsize/3} -${dsize} ${dsize/3} ${dsize} -${dsize/3} ${dsize} -${dsize/3} -${dsize} Z`}
 pathCircle = d3.path()
+
 
 //var sym = d3.symbol()
 //            .type(d3.symbolTriangle).size(50);
@@ -207,11 +209,13 @@ pathCircle = d3.path()
                      if ((d.symboltype).toLowerCase()=="c") {
                          pathCircle.arc(0, 0, +d.symbolsize, 0,360)
                          return pathCircle}
-                     if (d.symboltype=="d") {return selfMadeDiamondLong(+d.symbolsize)}
+                     if (d.symboltype.toLowerCase()=="d") {return selfMadeDiamondLong(+d.symbolsize)}
+                     if (d.symboltype.toLowerCase()=="l") {return selfMadeLineSqare(+d.symbolsize)}
+
                  }
                  } )
       .attr("fill", d=>csr=="No"? "black" : (d.symbolcolor).toLowerCase())
-      .attr('transform', (d, i) =>`translate( ${xA(d.effect)+5}, ${rowHeight * i+10})`);
+      .attr('transform', (d, i) =>`translate( ${xA(d.effect)+5.5}, ${rowHeight * i+10})`);
 
 
 
