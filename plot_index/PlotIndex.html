@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plots</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <style>
+        #myInput {
+            position: relative;
+            margin-top:10px;
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            width: 26%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 0px;
+            }
+
+        #header{
+            position:relative;
+            margin-top:1%;
+            text-align: center;
+        }
+        .links {
+            position: relative;
+            margin-top:5px;
+            width:30%;
+            height:30%;
+            margin-left:auto;
+            margin-right:auto;
+            text-align: center;
+            border: 1px solid rgb(111, 170, 234);
+            border-radius: 20px;
+            box-shadow: 5px 5px lightblue;
+            
+        }
+        #link2,#link3 { margin-top:5%}
+        .links:hover{
+            border:2px solid rgb(77, 83, 246);
+            box-shadow: 5px 5px rgb(77, 83, 246);
+        }
+        img{
+            margin-top:0px;
+            width:96%;
+            height:96%;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <p>Contact: Lei Huang at leihuang@uab.edu</p>
+    </div>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a plot.." title="Type in a variable">
+
+    <div class="links" id="link1">
+        <h2>Forest Plot</h2>
+        <a href="https://leihuang-statistician.github.io/webpageTest/ForestPlot/forest7.html" target="_blank"><img src="./imgs/forestplot.png" rel="forestplot"></a>
+    </div>
+    <div class="links" id="link2">
+        <h2>US Geographic Heatmap</h2>
+        <a href="https://leihuang-statistician.github.io/webpageTest/USgeoheatmap/geotest5.html" target="_blank"><img src="./imgs/geohtmp.png" rel="USheatmap"></a>
+    </div>
+    <div class="links" id="link3">
+        <h2>Heat Map</h2>
+        <a href="https://leihuang-statistician.github.io/webpageTest/Heatmap/heatmap3.html" target="_blank"><img src="./imgs/htmp.png" rel="heatmap"></a>
+    </div>
+<script>
+    var divs=$( ".links" )
+    
+
+    function myFunction() {
+    for (var i=0;i<divs.length;i++) {
+        var txtValue=$(divs[i]).text().toString().toUpperCase()
+        var filter= $("#myInput").val().toUpperCase();
+        if (txtValue.indexOf(filter) > -1) {
+            divs[i].style.display = "";
+      } else {
+            divs[i].style.display = "none";
+      }
+    }
+    }
+</script>
+</body>
+</html>
