@@ -14,3 +14,6 @@ https://leihuang-statistician.github.io/webpageTest/Heatmap/heatmap3.html
 
 United State Geographic Heat Map
 https://leihuang-statistician.github.io/webpageTest/USgeoheatmap/geotest5.html
+
+Plot index 
+https://leihuang-statistician.github.io/webpageTest/plot_index/PlotIndex.html
