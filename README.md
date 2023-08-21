@@ -17,3 +17,6 @@ https://leihuang-statistician.github.io/webpageTest/USgeoheatmap/geotest5.html
 
 Plot index 
 https://leihuang-statistician.github.io/webpageTest/plot_index/PlotIndex.html
+
+table
+https://leihuang-statistician.github.io/webpageTest/tabletest/table.html
