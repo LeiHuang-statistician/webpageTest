@@ -1,0 +1,41 @@
+/* table {
+    border-collapse: collapse;
+    margin-left:50px;
+    }
+
+th,td {
+border: 1px gray solid;
+padding: 4px;
+width: 5em;
+
+} */
+
+table {
+    margin: 0 0 40px 0;
+    width: 100%;
+    display:table
+ 
+  }
+
+  
+  th {
+    background:  #ea6153;
+    font-weight: 900;
+    border-bottom-style: double;
+  }
+  tr {
+    display: table-row;
+    background: white;
+  }
+
+  tr:nth-of-type(odd) {
+    background: #f6f6f6;
+  }
+
+  td {
+    text-align: center;
+  }
+
+  td:nth-child(1) {
+    text-align: left;
+  }
