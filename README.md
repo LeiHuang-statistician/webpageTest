@@ -20,3 +20,6 @@ https://leihuang-statistician.github.io/webpageTest/plot_index/PlotIndex.html
 
 table
 https://leihuang-statistician.github.io/webpageTest/tabletest/table.html
+
+html to word
+https://leihuang-statistician.github.io/webpageTest/htmltoword/index.html
