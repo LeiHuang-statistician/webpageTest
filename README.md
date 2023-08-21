@@ -24,4 +24,7 @@ https://leihuang-statistician.github.io/webpageTest/tabletest/table.html
 html to word
 https://leihuang-statistician.github.io/webpageTest/htmltoword/index.html
 
+progress bar
+https://leihuang-statistician.github.io/webpageTest/progressbar/bar.html
+
 
