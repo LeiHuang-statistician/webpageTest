@@ -46,6 +46,8 @@ var svg = d3.select("#svg1")
   .interpolator(colortheme)
   .domain([rmin,rmax])
 
+
+
   // add the squares
   svg.selectAll()
     .data(data)
@@ -86,13 +88,24 @@ var svg = d3.select("#svg1")
     
 
 
-           var colors=[]
-           for (var i=rmax;i>=rmin;i--){
-               color=myColor(i)
-               colors.push(color)
-           }
+//           var colors=[]
+//           for (var i=rmax;i>=rmin;i--){
+//               color=myColor(i)
+//               colors.push(color)
+//           }
+        eff.sort(function(a, b) {
+          return a - b;
+        });
+        eff.reverse();
+        //console.log('eff',eff)
 
+        var colors=[]
+        eff.forEach(function(d){
+        color=myColor(d)
+        colors.push(color)
+        })
 
+        console.log("colors",colors)
         var grad = svg.append('defs')
         .append('linearGradient')
         .attr('id', 'grad')

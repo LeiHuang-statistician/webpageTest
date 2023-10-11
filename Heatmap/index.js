@@ -2,7 +2,7 @@ var idarray = $("#sidebar") //get sidebar ids.
              .find("img") //Find the spans
              .map(function() { return this.id; }) //Project Ids
              .get(); //ToArray
-console.log(idarray)
+//console.log(idarray)
 
 function readfile(e){
     var file = document.getElementById("myfile").files[0];
@@ -15,8 +15,8 @@ function readfile(e){
             rHeader = csvData.split('\r').join('').split('\n')
             Dheaders =rHeader[0].split(',');
             coln=data.length
-            console.log(data)
-            console.log('headers',Dheaders)
+            //console.log(data)
+            //console.log('headers',Dheaders)
         
             
             yrow=[]
@@ -38,8 +38,8 @@ function readfile(e){
         
             varn=yheader.length
             grpn=xheader.length
-            console.log('xheader', varn)
-            console.log('yheader', grpn)
+            //console.log('xheader', varn)
+            //console.log('yheader', grpn)
             eff=[]
             data.forEach(function(item){
             d=+item['value']
@@ -49,9 +49,9 @@ function readfile(e){
         
             rmin=(+Math.min(...eff))
             rmax=(+Math.max(...eff))
-            console.log(eff)
-            console.log('rmin',rmin)
-            console.log('rmin',rmax)
+            //console.log(eff)
+            //console.log('rmin',rmin)
+            //console.log('rmin',rmax)
 
             title=[]
             data.forEach(function(item){
