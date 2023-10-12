@@ -88,22 +88,14 @@ var svg = d3.select("#svg1")
     
 
 
-//           var colors=[]
-//           for (var i=rmax;i>=rmin;i--){
-//               color=myColor(i)
-//               colors.push(color)
-//           }
-        eff.sort(function(a, b) {
-          return a - b;
-        });
-        eff.reverse();
-        //console.log('eff',eff)
-
+        var gap=(rmax-rmin)/100
         var colors=[]
-        eff.forEach(function(d){
-        color=myColor(d)
-        colors.push(color)
-        })
+           for (var i=rmax;i>=rmin;){
+                i=i-gap
+               color=myColor(i)
+               colors.push(color)
+           }
+
 
         console.log("colors",colors)
         var grad = svg.append('defs')
