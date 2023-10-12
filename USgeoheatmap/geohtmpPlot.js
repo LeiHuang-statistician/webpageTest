@@ -27,6 +27,9 @@ function geohtmp(){
           .attr("d", path)
           .attr("stroke","black")
           .attr("fill", d=>ctl===1? "none":+d.properties.value===99999? "black" : myColor(+d.properties.value))
+              .append('title')
+              .text(d=>`Map : ${d.properties.name} : ${d.id} , Your dataset: ${d.properties.FIPS}, value: ${d.properties.value}`);
+
     
         svg.append("g")
           .attr("class", "counties")
@@ -86,13 +89,18 @@ function geohtmp(){
                      return stl})
                 .style("opacity", d=>vls===1? 1 : 0)
     
-           var colors=[]
-           for (var i=rmin;i<=rmax;i++){
-               color=myColor(i)
-               colors.push(color)
-           }
-    //      colors = [ myColor(0),myColor(100)];
-    
+        eff.sort(function(a, b) {
+          return a - b;
+        });
+
+        //console.log('eff',eff)
+
+        var colors=[]
+        eff.forEach(function(d){
+        color=myColor(d)
+        colors.push(color)
+        })
+
           var grad = svg.append('defs')
             .append('linearGradient')
             .attr('id', 'grad')
@@ -100,7 +108,7 @@ function geohtmp(){
             .attr('x2', '100%')
             .attr('y1', '0%')
             .attr('y2', '0%');
-    
+
           grad.selectAll('stop')
             .data(colors)
             .enter()
@@ -109,7 +117,7 @@ function geohtmp(){
             .attr('offset', function(d,i){
               return 100 * (i / (colors.length - 1)) + '%';
             })
-    
+
           svg.append('rect')
             .attr('width', 750)
             .attr('height',20)  /*panel height*/
@@ -117,7 +125,7 @@ function geohtmp(){
             .style("stroke", "black")
             .style("stroke-width", 0.5)
             .attr('transform', `translate(100,680)`)
-    
+
           var xA = d3.scaleLinear()
             .domain([rmin, rmax])
             .range([0, 750])    /*right axis height*/
@@ -125,7 +133,7 @@ function geohtmp(){
           var xAxis = d3.axisBottom(xA)
             .ticks(6)
             .tickSize(0)
-    
+
           xAxidsG=svg.append('g')
             .attr("id", "xAxidsG")
             .attr("class", "xAxidsG")
