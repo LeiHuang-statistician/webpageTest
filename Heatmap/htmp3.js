@@ -97,7 +97,7 @@ var svg = d3.select("#svg1")
            }
 
 
-        console.log("colors",colors)
+        //console.log("colors",colors)
         var grad = svg.append('defs')
         .append('linearGradient')
         .attr('id', 'grad')
