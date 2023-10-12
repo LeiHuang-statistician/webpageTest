@@ -88,18 +88,27 @@ function geohtmp(){
                      stl=stlabel(d.properties.name.toUpperCase())
                      return stl})
                 .style("opacity", d=>vls===1? 1 : 0)
-    
-        eff.sort(function(a, b) {
-          return a - b;
-        });
 
-        //console.log('eff',eff)
 
+        var gap=(rmax-rmin)/100
         var colors=[]
-        eff.forEach(function(d){
-        color=myColor(d)
-        colors.push(color)
-        })
+           for (var i=rmax;i>=rmin;){
+                i=i-gap
+               color=myColor(i)
+               colors.push(color)
+           }
+        colors.reverse()
+//        eff.sort(function(a, b) {
+//          return a - b;
+//        });
+//
+//        //console.log('eff',eff)
+//
+//        var colors=[]
+//        eff.forEach(function(d){
+//        color=myColor(d)
+//        colors.push(color)
+//        })
 
           var grad = svg.append('defs')
             .append('linearGradient')
