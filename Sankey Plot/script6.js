@@ -206,7 +206,7 @@ const download = () => {
 
 
 d3.csv(
-     "test_all.csv",
+     "https://raw.githubusercontent.com/LeiHuang-statistician/webpageTest/main/Sankey%20Plot/test_All.csv",
     (data) => {
     //********************get nodes**********************
     lab1=[]
