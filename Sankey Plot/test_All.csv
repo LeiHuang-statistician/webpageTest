@@ -3,8 +3,6 @@ ALL,ALL (0d),0,Death 182,Death (0-182d),1,247
 ALL,ALL (0d),0,Alive SNF 182,Alive SNF (0-182d),2,223
 ALL,ALL (0d),0,Alive No SNF 182,Alive No SNF (0-182d),3,1002
 Death 182,Death (0-182d),1,Death 365,Death (182-365d),4,247
-Death 182,Death (0-182d),1,Alive SNF 365,Alive SNF (182-365d),5,0
-Death 182,Death (0-182d),1,Alive No SNF 365,Alive No SNF (182-365d),6,0
 Alive SNF 182,Alive SNF (0-182d),2,Death 365,Death (182-365d),4,35
 Alive SNF 182,Alive SNF (0-182d),2,Alive SNF 365,Alive SNF (182-365d),5,55
 Alive SNF 182,Alive SNF (0-182d),2,Alive No SNF 365,Alive No SNF (182-365d),6,133
