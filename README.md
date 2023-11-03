@@ -3,6 +3,9 @@
 Sankey Plot
 https://leihuang-statistician.github.io/webpageTest/Sankey%20Plot/index.html
 
+Sankey Plot updated version
+https://leihuang-statistician.github.io/webpageTest/Sankey%20Plot/index8_inputdata.html
+
 Sankey Plot with gradient color
 https://leihuang-statistician.github.io/webpageTest/Sankey%20Plot/index5.html
 
