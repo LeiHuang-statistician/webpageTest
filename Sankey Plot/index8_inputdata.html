@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <script  src="https://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+</head>
+<style>
+
+#sankeysvg {
+ margin-left: 10%;
+}
+#downloadCsv {
+ display: block;
+ height: 30px;
+ width: 200px;
+ border-radius: 10px;
+ background-color: white;
+ cursor: pointer;
+ font-family: Garamond ;
+ font-size: 1.2rem;
+}
+.hidden{
+ height: 25px;
+ width: 120px;
+ border: 1px solid;
+ border-radius: 5px;
+ background-color:#f7779d;
+ background-image: linear-gradient(to right, #f7779d , #f5f262);
+ cursor: pointer;
+visibility: hidden;
+}
+
+</style>
+<body>
+
+<div>
+    <label style="color:black; "><b><em>Please choose your file:</em></b></label>
+    <br>
+    <input type="file" id="myfile" name="myfile" onchange="readfile()">
+</div>
+
+
+<button class='hidden' style="position:absolute;  left:550px;top:50px;"onClick=download()>Download PNG</button>
+<button class='hidden' style="position:absolute;  left:700px;top:50px;" onClick=printToCart2()>Download PDF</button>
+<button id="downloadCsv" style="position:absolute;  left:250px;top:15px;" >Example csv file</button>
+<script src="plot.js"></script>
+<script src="csvreader.js"></script>
+<script src="script8.js"></script>
+
+</body>
+</html>

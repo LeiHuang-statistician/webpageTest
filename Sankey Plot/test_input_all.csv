@@ -1,0 +1,11 @@
+name_s,label_s,link_s,color_s,name_t,label_t,link_t,color_t,value,node_id,node_x,node_y,title,title_size,label_size,plot_width,plot_height,text_add,text_x,text_y,legend_text,legend_x,legend_y,legend_color
+ALL,ALL (0d),0,blue,Death 182,Death (0-182d),1,red,247,1,,0,All Participants,20,15,800,600,Visit1,-5,520,Normal,250,550,green
+ALL,ALL (0d),0,blue,Alive SNF 182,Alive SNF (0-182d),2,orange,223,2,,100,,,,,,Visit2,350,520,Above Normal,400,550,red
+ALL,ALL (0d),0,blue,Alive No SNF 182,Alive No SNF (0-182d),3,green,1002,3,,200,,,,,,Visit3,710,520,Missing,600,550,blue
+Death 182,Death (0-182d),1,red,Death 365,Death (182-365d),4,red,247,4,,0,,,,,,,,,,,,
+Alive SNF 182,Alive SNF (0-182d),2,orange,Death 365,Death (182-365d),4,red,35,5,,120,,,,,,,,,,,,
+Alive SNF 182,Alive SNF (0-182d),2,orange,Alive SNF 365,Alive SNF (182-365d),5,orange,55,6,,180,,,,,,,,,,,,
+Alive SNF 182,Alive SNF (0-182d),2,orange,Alive No SNF 365,Alive No SNF (182-365d),6,green,133,,,,,,,,,,,,,,,
+Alive No SNF 182,Alive No SNF (0-182d),3,green,Death 365,Death (182-365d),4,red,48,,,,,,,,,,,,,,,
+Alive No SNF 182,Alive No SNF (0-182d),3,green,Alive SNF 365,Alive SNF (182-365d),5,orange,48,,,,,,,,,,,,,,,
+Alive No SNF 182,Alive No SNF (0-182d),3,green,Alive No SNF 365,Alive No SNF (182-365d),6,green,906,,,,,,,,,,,,,,,
