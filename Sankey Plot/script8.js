@@ -157,7 +157,7 @@ let nodes2 = leftJoinArrays(nodes, nodexy, 'node');
 document.getElementById('downloadCsv').addEventListener('click', async () => {
     try {
         // URL of the online CSV file
-        const csvURL = 'https://raw.githubusercontent.com/LeiHuang-statistician/Projects/main/SankeyPlot/test_All.csv';
+        const csvURL = 'https://raw.githubusercontent.com/LeiHuang-statistician/webpageTest/main/Sankey%20Plot/test_input_all.csv';
 
         // Fetch the CSV file from the URL
         const response = await fetch(csvURL);
