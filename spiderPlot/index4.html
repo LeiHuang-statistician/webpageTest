@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link href="radar.css" rel="stylesheet">
+</head>
+<style>
+    #loader {
+    position: absolute;
+    top:35%;
+    bottom: 0px;
+    left: 35%;
+    width:60%;
+    height:80%;
+    }
+</style>
+<body>
+    
+<div id="files">
+    <div id="tutor">
+        <a href="spiderPlot_instructions.pdf" target="_blank" id="pdf">
+        <button>Tutorial</button>
+        </a>
+    </div>
+
+    <div>
+        <label style="color:black; "><b><em>Please choose your file:</em></b></label>
+        <br>
+        <input type="file" id="myfile" name="myfile" onchange="readfile()">
+    </div>
+
+    <div id="dtndiv">
+        <p>
+           <a href="" id="link" download="image.png">
+           <button>Download PNG</button>
+           </a>
+        </p>
+        <p>
+            <button id="download">Download PDF</button>
+        </p>
+    </div>
+</div>
+    <button id="downloadCsv" style="position:absolute;  left:5px;top:90px;" >Import Example CSV</button>
+<br>
+<div class="container" style="display: flex;">
+<!--    <div class="Axis" style="width: 20%";>-->
+<!--       <label style="color:black; "><b><em>Label Rotate</em></b></label>-->
+<!--        <br>-->
+<!--      <div>-->
+<!--          <label for="ylab" style="color:black;">Y:</label>-->
+<!--       <input type="text" class="ylab" id="ylab" name="ylab" value="0"   minlength="4" maxlength="8" size="5">&deg-->
+<!--       </div>-->
+<!--      <div>-->
+<!--          <label for="xlab" style="color:black;">X:</label>-->
+<!--          <input type="text" class="xlab" id="xlab" name="xlab" value="0"   required minlength="4" maxlength="8" size="5">&deg-->
+<!--      </div>-->
+<!--    </div>-->
+
+<!--    <div class="Axis" style="width: 20%";>-->
+<!--       <label style="color:black; "><b><em>Value Range</em></b></label>-->
+<!--        <br>-->
+<!--    <div>-->
+<!--        <label for="rmin" style="color:black;">Min</label>-->
+<!--        <input type="text" class="rmin" id="rmin" name="rmin" value="Min?"   minlength="4" maxlength="8" size="5">-->
+<!--        </div>-->
+<!--    <div>-->
+<!--        <label for="rmax" style="color:black;">Max</label>-->
+<!--        <input type="text" class="rmax" id="rmax" name="rmax" value="Max?"   required minlength="4" maxlength="8" size="5">-->
+<!--    </div>-->
+<!--    </div>-->
+<!--      <br><br>-->
+    
+    <form id="pos" style="width: 20%";>
+        <label style="color:black;"><b><em>Position:</em></b></label>
+        <br>
+          <label for="titpos" style="color:black;">Title</label>
+       <input type="range" class='titpos' id='titpos' value="300" min='0' max="600" step="1">
+    </form>
+      <br><br>
+    
+    <div id="bg" >
+        <label style="color:black; "><b><em>Area Cover</em></b></label>
+        <select class='vls' name="texts" >
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+    </div>
+    <br> <br>
+    <div id="lableformat">
+        <label style="color:black; "><b><em>Value Format</em></b></label>
+        <select class='lft' name="lft" >
+            <option value="float">One Decimal</option>
+            <option value="percent">Percent</option>
+            <option value="int">Zero Decimal</option>
+            <option value="float2">Two Decimal</option>
+
+
+        </select>
+    </div>
+    <br><br>
+
+
+</div>
+
+<div id="htmcontainer">
+<!--    <div id="sidebar">-->
+<!--        <div class="colordiv"><b><em>Colors</em></b></div>-->
+<!--        <div class="colordiv" ><img class="colorplate"  id="color1" src="colors/interpolateBlues.PNG"></div>-->
+<!--        <div class="colordiv" ><img class="colorplate"  id="color2" src="colors/interpolateGreens.PNG"></div>-->
+<!--        <div class="colordiv" ><img class="colorplate"  id="color3" src="colors/interpolateOranges.PNG"></div>-->
+<!--        <div class="colordiv" ><img class="colorplate"  id="color4" src="colors/interpolatePurples.PNG"></div>-->
+<!--        <div class="colordiv" ><img class="colorplate"  id="color5" src="colors/interpolateReds.PNG"></div>-->
+<!--        <div class="colordiv" ><img class="colorplate"  id="color6" src="colors/interpolateBrBG.PNG"></div>-->
+<!--        <div class="colordiv" ><img class="colorplate"  id="color7" src="colors/interpolatePiYG.PNG"></div>-->
+<!--        <div class="colordiv" ><img class="colorplate"  id="color8" src="colors/interpolateRdBu.PNG"></div>-->
+<!--        <div class="colordiv" ><img class="colorplate"  id="color9" src="colors/interpolateRdYlGn.PNG"></div>-->
+<!--    </div>-->
+    <div id="forsvg">     
+        <svg id="svg1" xmlns='http://www.w3.org/2000/svg' viewbox="10 0 800 800"></svg>
+    </div>
+    <div id='loader' ><img id="loaderimg" src="loader.gif"/></div>
+</div>
+
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script type='text/javascript' src='csvreader.js'></script>
+<script type='text/javascript' src='radarChart4.js'></script>
+<script type='text/javascript' src='index4.js'></script>
+</body>
+</html>
+
