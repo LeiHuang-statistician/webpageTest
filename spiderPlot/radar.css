@@ -1,0 +1,121 @@
+
+#forsvg{background-color: white;}
+
+.Axis{
+    margin-left: 30px;
+}
+.container {
+width: 1000px;
+margin-top: -50px;
+margin-left: 360px;
+}
+
+#lableformat{margin-left:20px}
+
+#htmcontainer {
+    display:inblock;
+    display:flex;
+}
+
+#svg1 {
+  margin-top: 10%;
+  margin-left:10%;
+  }
+#sidebar {
+  margin-top: 50px;
+  margin-left:30px;
+  height: 450px;
+  width: 150px;
+  border: 1px solid #5ba545;
+  /* border: 1px solid #f1f4f1; */
+  border-radius: 25px;
+
+}
+
+
+#dtndiv{
+    position: fixed;
+    left: 850px;
+    top:40%;
+    padding:5px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* This creates space between all flex items */
+    margin:auto;
+    }
+
+button {
+    padding:5px 15px;
+    background:#5ba545;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 10px;
+    color: #fff;
+    margin-left:15px;
+    }
+
+.button:first-child {
+  margin-bottom: 20px; /* Adjust this value to increase/decrease space */
+}
+button:hover {
+    color: black;
+    box-shadow: 0 0 30px 0 transparentize(0.5);
+    }
+
+label{
+    display: inblock;
+    padding-right:5px;
+    padding-top: 0px; /*This needs to be modified to fit */
+    }
+#pos label{
+    float:left;
+    }
+#files {
+margin-top:20px;
+display:flex;
+}
+#tutor {margin-right: 20px}
+
+
+
+
+.name {
+    font-family: 'Raleway', sans-serif;
+    fill: #333333;
+}
+.tooltip {
+    fill: #333333;
+}
+
+.legend {
+margin-top: 20px;
+}
+.legend-item {
+    display: inline-block;
+    margin-right: 20px;
+    color: black; /* Only legend text is black */
+}
+.legend-color {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+#downloadCsv {
+    display: block;
+    height: 30px;
+    width: 180px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;               /* Black text */
+    border: 1px solid black;    /* Black edge/border */
+    cursor: pointer;
+    font-family: Garamond;
+    font-size: 1rem;
+}
+/* #xband .tick text {
+ transform: rotate(45deg);
+ text-anchor: start;
+} */
