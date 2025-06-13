@@ -18,6 +18,19 @@
     width:60%;
     height:80%;
     }
+
+    #downloadCsv {
+    display: block;
+    height: 30px;
+    width: 180px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;               /* Black text */
+    border: 1px solid Green;    /* Black edge/border */
+    cursor: pointer;
+    font-family: Garamond;
+    font-size: 1rem;
+}
 </style>
 <body>
     
@@ -122,7 +135,7 @@
     </div>
     <div id='loader' ><img src="colors/loader.gif"/></div>
 </div>
-
+<button id="downloadCsv" style="position:absolute;  left:760px;top:15px;" >Import Example CSV</button>
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 <script type='text/javascript' src='csvreader.js'></script>
 <script type='text/javascript' src='htmp3.js'></script>
