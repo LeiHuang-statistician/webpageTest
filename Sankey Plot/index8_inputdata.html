@@ -33,6 +33,32 @@
 visibility: hidden;
 }
 
+#tutor {
+margin-top:-30px;
+margin-left:500px;
+display:flex;
+}
+
+
+#tbt {
+    padding:5px 15px;
+    background:#5ba545;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 10px;
+    color: #fff;
+    margin-left:15px;
+    }
+
+#tbt{
+  margin-bottom: 20px; /* Adjust this value to increase/decrease space */
+}
+#tbt:hover {
+    color: black;
+    box-shadow: 0 0 30px 0 transparentize(0.5);
+    }
+
 </style>
 <body>
 
@@ -42,6 +68,11 @@ visibility: hidden;
     <input type="file" id="myfile" name="myfile" onchange="readfile()">
 </div>
 
+<div id="tutor">
+    <a href="sankeyPlot_instructions.pdf" target="_blank" id="pdf">
+    <button id="tbt">Tutorial</button>
+    </a>
+</div>
 
 <button class='hidden' style="position:absolute;  left:550px;top:50px;"onClick=download()>Download PNG</button>
 <button class='hidden' style="position:absolute;  left:700px;top:50px;" onClick=printToCart2()>Download PDF</button>
