@@ -624,4 +624,34 @@ $('.cs').change(function() {
 
 }
 
+    document.getElementById('downloadCsv').addEventListener('click', async () => {
+        try {
+            // URL of the online CSV file
+            const csvURL = 'https://raw.githubusercontent.com/LeiHuang-statistician/webpageTest/refs/heads/main/ForestPlot/forest_csv_Ls.csv';
 
+            // Fetch the CSV file from the URL
+            const response = await fetch(csvURL);
+
+            if (response.ok) {
+                const csvData = await response.text();
+
+                // Create a Blob containing the CSV file content
+                const blob = new Blob([csvData], { type: 'text/csv' });
+
+                // Create an anchor element
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = 'downloaded_file.csv';
+
+                // Simulate click on the anchor element to initiate the download
+                link.click();
+
+                // Clean up
+                URL.revokeObjectURL(link.href);
+            } else {
+                console.error('Failed to fetch the file');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+    }
+});
