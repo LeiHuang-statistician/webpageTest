@@ -1,0 +1,16 @@
+xlabel,ylabel,value,title
+Morning,Monday,1,Heat map example
+Morning,Tuesday,99999,A short description of the take-away message of this chart.
+Morning,Wednesday,30,
+Morning,Thursday,50,
+Morning,Friday,1,
+Afternoon,Monday,20,
+Afternoon,Tuesday,1,
+Afternoon,Wednesday,60,
+Afternoon,Thursday,80,
+Afternoon,Friday,30,
+Evening,Monday,30,
+Evening,Tuesday,60,
+Evening,Wednesday,1,
+Evening,Thursday,-10,
+Evening,Friday,20,
