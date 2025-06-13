@@ -23,8 +23,6 @@ https://leihuang-statistician.github.io/webpageTest/USgeoheatmap/geotest5.html
 Spider Plot
 https://leihuang-statistician.github.io/webpageTest/spiderPlot/index4.html
 
-Plot index 
-https://leihuang-statistician.github.io/webpageTest/plot_index/PlotIndex.html
 
 table
 https://leihuang-statistician.github.io/webpageTest/tabletest/table.html
@@ -34,5 +32,9 @@ https://leihuang-statistician.github.io/webpageTest/htmltoword/index.html
 
 progress bar
 https://leihuang-statistician.github.io/webpageTest/progressbar/bar.html
+
+Plot index 
+https://leihuang-statistician.github.io/webpageTest/plot_index/PlotIndex.html
+
 
 
