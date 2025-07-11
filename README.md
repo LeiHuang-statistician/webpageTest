@@ -21,8 +21,10 @@ https://leihuang-statistician.github.io/webpageTest/USgeoheatmap/geotest5.html
 
 
 Spider Plot
-https://leihuang-statistician.github.io/webpageTest/spiderPlot/index4.html
+https://leihuang-statistician.github.io/webpageTest/sensitivityPlot/index4.html
 
+ROC, Sensitivity, Specificity, or Youden's index Plot
+https://leihuang-statistician.github.io/webpageTest/spiderPlot/index4.html
 
 table
 https://leihuang-statistician.github.io/webpageTest/tabletest/table.html
