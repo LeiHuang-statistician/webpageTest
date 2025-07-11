@@ -1,0 +1,136 @@
+#forsvg{background-color: white;}
+
+.container {
+width: 1000px;
+margin-top: -50px;
+margin-left: 360px;
+}
+
+#lableformat{margin-left:20px}
+
+#htmcontainer {
+    display:inblock;
+    display:flex;
+}
+
+
+#sidebar {
+  margin-top: 50px;
+  margin-left:30px;
+  height: 450px;
+  width: 150px;
+  border: 1px solid #5ba545;
+  /* border: 1px solid #f1f4f1; */
+  border-radius: 25px;
+
+}
+
+
+#dtndiv{
+    position: fixed;
+    left: 850px;
+    top:40%;
+    padding:5px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* This creates space between all flex items */
+    margin:auto;
+    }
+
+button {
+    padding:5px 15px;
+    background:#5ba545;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 10px;
+    color: #fff;
+    margin-left:15px;
+    }
+
+.button:first-child {
+  margin-bottom: 20px; /* Adjust this value to increase/decrease space */
+}
+button:hover {
+    color: black;
+    box-shadow: 0 0 30px 0 transparentize(0.5);
+    }
+
+label{
+    display: inblock;
+    padding-right:5px;
+    padding-top: 0px; /*This needs to be modified to fit */
+    }
+#pos label{
+    float:left;
+    }
+
+#files {
+margin-top:20px;
+display:flex;
+}
+#tutor {margin-right: 20px}
+
+
+#downloadCsv {
+    display: block;
+    height: 30px;
+    width: 180px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;               /* Black text */
+    border: 1px solid black;    /* Black edge/border */
+    cursor: pointer;
+    font-family: Garamond;
+    font-size: 1rem;
+}
+
+.axis path, .axis line {
+            fill: none;
+            stroke: #000;
+            shape-rendering: crispEdges;
+        }
+/*.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
+/*
+.point {
+    fill: red;
+    stroke: #000;
+    stroke-opacity: 1;
+    fill-opacity: 0;
+    stroke-width: 1px;
+}
+*/
+/*.point:first-of-type,
+.point:last-of-type{
+  display: none;
+}*/
+
+
+#roc-curve {
+   margin-top: 100px;
+   margin-left: 300px;
+}
+
+.tooltip {
+    position: fixed;  /* Changed to fixed positioning */
+    padding: 8px;
+    background: white;
+    color: black;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    pointer-events: none;
+    font-size: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 100;  /* Higher z-index */
+    max-width: 200px;
+}
+
+.legend rect {
+  stroke: #ccc;
+  stroke-width: 1px;
+}
+

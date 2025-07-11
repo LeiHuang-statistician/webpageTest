@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script  src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link href="roc.css" rel="stylesheet">
+</head>
+<style>
+    #loader {
+    position: absolute;
+    top:35%;
+    bottom: 0px;
+    left: 35%;
+    width:60%;
+    height:80%;
+    }
+</style>
+<body>
+
+<div id="files">
+    <div id="tutor">
+        <a href="spiderPlot_instructions.pdf" target="_blank" id="pdf">
+        <button>Tutorial</button>
+        </a>
+    </div>
+
+    <div>
+        <label style="color:black; "><b><em>Please choose your file:</em></b></label>
+        <br>
+        <input type="file" id="myfile" name="myfile" onchange="readfile()">
+    </div>
+
+    <div id="dtndiv">
+        <p>
+           <a href="" id="link" download="image.png">
+           <button>Download PNG</button>
+           </a>
+        </p>
+        <p>
+            <button id="download">Download PDF</button>
+        </p>
+    </div>
+</div>
+    <button id="downloadCsv" style="position:absolute;  left:5px;top:80px;" >Import Example CSV</button>
+<br>
+<div class="container" style="display: flex;">
+<!--    <form id="pos" style="width: 20%";>-->
+<!--        <label style="color:black;"><b><em>Position:</em></b></label>-->
+<!--        <br>-->
+<!--          <label for="titpos" style="color:black;">Title</label>-->
+<!--       <input type="range" class='titpos' id='titpos' value="300" min='0' max="600" step="1">-->
+<!--    </form>-->
+<!--      <br><br>-->
+    <br> <br>
+    <div id="lableformat">
+        <label style="color:black; "><b><em>Curves</em></b></label>
+        <select class='lft' name="lft" >
+          <option value="ROC">ROC curve</option>
+          <option value="Spec_vs_sen">Specificity vs sensitivity</option>
+          <option value="Spec_vs_sen_vs_youd">Specificity vs sensitivity vs Youden</option>
+        </select>
+    </div>
+    <br><br>
+</div>
+<div id="htmcontainer">
+    <div id="forsvg">
+        <svg id="roc-curve" xmlns='http://www.w3.org/2000/svg' viewbox="10 0 550 550"></svg>
+    </div>
+    <div id='loader' ><img id="loaderimg" src="loader.gif"/></div>
+</div>
+
+<!--<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>-->
+<script type='text/javascript' src='csvreader.js'></script>
+<script type='text/javascript' src='roc.js'></script>
+<script type='text/javascript' src='spec.js'></script>
+<script type='text/javascript' src='index4.js'></script>
+
+</body>
+</html>
