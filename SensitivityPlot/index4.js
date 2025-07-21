@@ -53,7 +53,7 @@ function readfile(e){
 			  d.specificity=+d.specificity
 			  d.youden=+d.youden
 			  d.marker=+d.marker
-			  if (d.tpr!=" "){data2.push(d)}
+			  data2.push(d)}
 			  })
 //            console.log(data2)
 
