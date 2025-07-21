@@ -53,9 +53,12 @@ function readfile(e){
 			  d.specificity=+d.specificity
 			  d.youden=+d.youden
 			  d.marker=+d.marker
-			  data2.push(d)}
+			  data2.push(d)
 			  })
-//            console.log(data2)
+
+//		    data2.unshift({tpr: 0, prob: 1});
+            console.log(data2)
+
 
         // Check if {fpr: 0.0, tpr: 0.0 } exists
         const hasZeroPoint = data.some(item =>
