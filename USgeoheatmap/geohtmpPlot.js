@@ -179,9 +179,11 @@ function geohtmp(){
     
       image.addEventListener('load', ()=>{
           canvas=document.createElement('canvas')
-          canvas.width=width;
-          canvas.height=height;
+          const scale = 600 / 96;
+          canvas.width=width*scale;
+          canvas.height=height*scale;
           context=canvas.getContext('2d')
+          context.scale(scale, scale);
           context.drawImage(image,x,y,width, height)
           //console.log('context',context)
           const link=document.getElementById('link');
