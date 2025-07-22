@@ -97,7 +97,7 @@ var svg = d3.select("#svg1")
            }
 
 
-        //console.log("colors",colors)
+        console.log("colors",colors)
         var grad = svg.append('defs')
         .append('linearGradient')
         .attr('id', 'grad')
@@ -173,9 +173,11 @@ svg.selectAll(".tiltext").data(title)
 
   image.addEventListener('load', ()=>{
       canvas=document.createElement('canvas')
-      canvas.width=width;
-      canvas.height=height;
+      const scale = 600 / 96;
+      canvas.width=width*scale;
+      canvas.height=height*scale;
       context=canvas.getContext('2d')
+      context.scale(scale, scale);
       context.drawImage(image,x,y,width, height)
       //console.log('context',context)
       const link=document.getElementById('link');
@@ -201,3 +203,5 @@ svg.selectAll(".tiltext").data(title)
   $('#rmax').val(rmax);
   $("#loader").hide();
 }
+
+
