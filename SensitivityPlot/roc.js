@@ -183,12 +183,15 @@ function RocCurve(data,fontSize,auc,AUC_show,point,titpos) {
   //console.log(svgUrl)
 
   image.addEventListener('load', ()=>{
+     const scale = 600 / 96;
       canvas=document.createElement('canvas')
-      canvas.width=width;
-      canvas.height=height;
+      canvas.width=width*scale;
+      canvas.height=height*scale;
       context=canvas.getContext('2d')
-      context.drawImage(image,x,y,width, height)
+      context.scale(scale, scale);
       //console.log('context',context)
+      context.drawImage(image,x,y,width, height)
+      //console.log('context',canvas.width)
       const link=document.getElementById('link');
       link.href=canvas.toDataURL();
       //console.log(link)

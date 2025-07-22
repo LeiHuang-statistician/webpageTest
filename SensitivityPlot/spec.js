@@ -96,7 +96,8 @@ function SpecCurve(data,fontSize,titpos, color,ydx) {
     // Create line generator and draw sensitivity curve
     const lineSen = d3.line()
         .x(d => xScale(d.prob))
-        .y(d => yScale(d.tpr));
+        .y(d => yScale(d.tpr))
+        .curve(d3.curveLinear);
 
     g.append("path")
         .datum(data)
@@ -104,7 +105,8 @@ function SpecCurve(data,fontSize,titpos, color,ydx) {
         .attr("d", lineSen)
         .style("stroke", 'blue')
         .attr("stroke-width","1.5px")
-        .attr("fill", "none");
+        .attr("fill", "none")
+
 
    // Create line generator and  draw spec curve
     const lineSpec = d3.line()
@@ -201,12 +203,14 @@ legendItems.append("text")
   //console.log(svgUrl)
 
   image.addEventListener('load', ()=>{
+      const scale = 600 / 96;
       canvas=document.createElement('canvas')
-      canvas.width=width;
-      canvas.height=height;
+      canvas.width=width*scale;
+      canvas.height=height*scale;
       context=canvas.getContext('2d')
+      context.scale(scale, scale);
       context.drawImage(image,x,y,width, height)
-      //console.log('context',context)
+      //console.log('context',canvas.width)
       const link=document.getElementById('link');
       link.href=canvas.toDataURL();
       //console.log(link)
