@@ -338,19 +338,20 @@ const download = () => {
   img.addEventListener('load', () => {
     // draw the image on an ad-hoc canvas
     const bbox = svg.getBBox();
-
+    const scale = 600 / 96;
     const canvas = document.createElement('canvas');
-    canvas.width = bbox.width;
-    canvas.height = bbox.height;
+    canvas.width = bbox.width*scale;
+    canvas.height = bbox.height*scale;
 
     const context = canvas.getContext('2d');
+    context.scale(scale, scale);
     context.drawImage(img, 0, 0, bbox.width, bbox.height);
 
     URL.revokeObjectURL(url);
 
     // trigger a synthetic download operation with a temporary link
     const a = document.createElement('a');
-    a.download = 'image.png';
+    a.download = 'image.tiff';
     document.body.appendChild(a);
     a.href = canvas.toDataURL();
     a.click();
