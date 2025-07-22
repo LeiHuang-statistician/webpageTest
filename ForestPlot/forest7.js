@@ -312,11 +312,13 @@ const image=document.createElement('img');
 image.src=svgUrl
 console.log(svgUrl)
 image.addEventListener('load', ()=>{
-canvas=document.createElement('canvas')
-    canvas.width=width;
-    canvas.height=height;
-context=canvas.getContext('2d')
-context.drawImage(image,x,y,width, height)
+    canvas=document.createElement('canvas')
+    const scale = 600 / 96;
+    canvas.width=width*scale;
+    canvas.height=height*scale;
+    context=canvas.getContext('2d')
+    context.scale(scale, scale);
+    context.drawImage(image,x,y,width, height)
 //console.log('context',context)
     const link=document.getElementById('link');
     link.href=canvas.toDataURL();
@@ -627,7 +629,7 @@ $('.cs').change(function() {
     document.getElementById('downloadCsv').addEventListener('click', async () => {
         try {
             // URL of the online CSV file
-            const csvURL = 'https://raw.githubusercontent.com/LeiHuang-statistician/webpageTest/refs/heads/main/ForestPlot/forest_csv_Ls.csv';
+            const csvURL = 'https://raw.githubusercontent.com/LeiHuang-statistician/webpageTest/refs/heads/main/ForestPlot/forest_csv_s.csv';
 
             // Fetch the CSV file from the URL
             const response = await fetch(csvURL);
