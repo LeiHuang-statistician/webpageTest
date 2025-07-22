@@ -94,8 +94,9 @@ function RadarChart(id, data, options,titpos,opacityArea,formatChoice) {
 	   .attr("x", function(d){return d*radius/cfg.levels;})
 	   .attr("y", 5)
 	   .attr("dy", "0.4em")
-	   .style("font-size", "11px")
-	   .attr("fill", "#737373")
+	   .style("font-size", "12px")
+	   .style('font-weight', 300)
+	   .attr("fill", "black")
 	   .text(function(d,i) {return Format(Math.round(maxValue * d/cfg.levels*10)/10); });
 
 	   axisGrid.selectAll(".axisLabel2")
@@ -105,8 +106,9 @@ function RadarChart(id, data, options,titpos,opacityArea,formatChoice) {
 	   .attr("x", 5)
 	   .attr("y", function(d){return -d*radius/cfg.levels;})
 	   .attr("dy", "0.4em")
-	   .style("font-size", "11px")
-	   .attr("fill", "#737373")
+	   .style("font-size", "12px")
+	   .style('font-weight', 300)
+	   .attr("fill", "black")
 	   .text(function(d,i) { return Format(Math.round(maxValue * d/cfg.levels*10)/10); });
 
 	/////////////////////////////////////////////////////////
@@ -133,6 +135,8 @@ function RadarChart(id, data, options,titpos,opacityArea,formatChoice) {
 	axis.append("text")
 		.attr("class", "name")
 		.style("font-size", "12px")
+		.style('font-weight', 500)
+	    .attr("fill", "black")
 		.attr("text-anchor", "middle")
 		.attr("dy", "0.35em")
 		.attr("x", function(d, i){ return rScale(maxValue * cfg.labelFactor) * Math.cos(angleSlice*i - Math.PI/2); })
@@ -333,9 +337,11 @@ function RadarChart(id, data, options,titpos,opacityArea,formatChoice) {
 
   image.addEventListener('load', ()=>{
       canvas=document.createElement('canvas')
-      canvas.width=width;
-      canvas.height=height;
+      const scale = 600 / 96;
+      canvas.width=width*scale;
+      canvas.height=height*scale;
       context=canvas.getContext('2d')
+      context.scale(scale, scale);
       context.drawImage(image,x,y,width, height)
       //console.log('context',context)
       const link=document.getElementById('link');
